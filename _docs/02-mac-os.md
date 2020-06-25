@@ -4,9 +4,13 @@ Some things specific to development under MacOS.
 
 ## Running app
 
+flutter pub get 
+
 flutter devices
 
 flutter run
+
+The Google Play Services SDK. You can get this from the Android SDK Manager in Android Studio.
 
 ## Running Android emulator
 

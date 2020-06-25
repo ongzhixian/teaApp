@@ -59,5 +59,14 @@ flutter {
 }
 
 dependencies {
-    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    //implementation 'com.google.mlkit:barcode-scanning:16.0.0'
+    implementation 'com.google.android.gms:play-services-mlkit-barcode-scanning:16.0.0'
+    // compile 'com.android.support:support-v4:24.2.0'
+    // Important - the CameraSource implementation in this project requires version 8.1 or higher.
+    // compile 'com.google.android.gms:play-services-vision:9.4.0+'
+    // compile 'com.android.support:design:24.2.0'
+
+    //implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    //classpath 'com.google.gms:google-services:4.2.0'
 }

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_barcode_scanner/flutter_barcode_scanner.dart';
 
 class HomePage extends StatefulWidget {
   // ZX: Later
@@ -86,8 +87,12 @@ class _HomePageState extends State<HomePage> {
                 // https://pub.dev/packages/flutter_barcode_scanner
 
                 // Stop camera after successful scan
-                // String barcodeScanRes = await FlutterBarcodeScanner.scanBarcode(
-                //     "#ff6666", "Cancel", false, ScanMode.DEFAULT);
+                String barcodeScanRes = await FlutterBarcodeScanner.scanBarcode(
+                    "#ff6666", "Cancel", false, ScanMode.QR);
+
+                setState(() {
+                  tagString = "${tagTextController.text}-$barcodeScanRes";
+                });
 
                 // // Use the below for continuous camera scan
                 // FlutterBarcodeScanner.getBarcodeStreamReceiver(
